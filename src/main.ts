@@ -1,4 +1,5 @@
 import express, { Express, Request, Response } from "express";
+import { connected } from "process";
 
 const app: Express = express();
 const port = process.env.PORT || 3000;
@@ -35,6 +36,7 @@ app.listen(port, () => {
 
 console.log("Websockets begin")
 import { WebSocketServer } from 'ws';
+import { connectDB, executeCommands } from "./database";
 
 // Store connections in a Map with custom IDs
 let clients = new Map();
@@ -66,3 +68,11 @@ wss.on('connection', function connection(ws) {
 setInterval(()=>{
   console.log(`Current clients: ${clients.size}`);
 },10*1000)
+
+
+async function run() {
+  await connectDB();
+  await executeCommands();
+}
+
+run();

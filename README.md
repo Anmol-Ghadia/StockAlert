@@ -33,7 +33,6 @@ A user can bypass the email communication and join the session using session-id
 1) Multiple users
 1) File transfer
 
-
 ## Todo
 1) create join page in pug
 1) create join page in express
@@ -55,6 +54,16 @@ A user can bypass the email communication and join the session using session-id
 
 ### Developer Instructions
 
+1) Make a `.env` file at the root of project with the following contents
+    ```py
+    # ----- DB credentials -----
+    ORACLE_USER=ora_YourCwlUsername
+    ORACLE_PASSWORD=aYouraStudentNumber
+    # ----- DB soruce -----
+    ORACLE_HOST=dbhost.students.cs.ubc.ca
+    ORACLE_PORT=1522
+    ORACLE_DBNAME=stu
+    ```
 1) To instal `node_modules`
     ```BASH
     npm install

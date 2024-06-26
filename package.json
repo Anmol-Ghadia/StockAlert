@@ -19,8 +19,10 @@
     "typescript": "^5.4.5"
   },
   "dependencies": {
+    "@types/oracledb": "^6.5.1",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
+    "oracledb": "^6.5.1",
     "pug": "^3.0.3",
     "ws": "^8.17.1"
   }
